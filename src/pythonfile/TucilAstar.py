@@ -85,7 +85,7 @@ def A_Star_Algoritma(NameSimpulAsal, NameSimpulTujuan):
     Hasil =""
     for text in listReturn[0]:
         if count == len(listReturn[0]) -1:
-            Hasil += text + ".\nJarak : " + str(listReturn[1])
+            Hasil += text + ".\nJarak : " + str(listReturn[1]) + " KM"
         else:
             Hasil += text + " ---> "
         count +=1
