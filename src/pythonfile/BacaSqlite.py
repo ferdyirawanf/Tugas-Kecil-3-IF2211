@@ -4,7 +4,7 @@ import json
 
 def getGeoData(nameSimpul):
     #Membaca data dan menembalikan file json dari geodata dengan addrees = namasimpul
-    path = "../sqlite/"
+    path = "sqlite/"
     conn = sqlite3.connect(path+'DataGeoLoad.sqlite3')
     cur = conn.cursor()
     find = 'SELECT * FROM Locations WHERE address LIKE ?'
@@ -17,7 +17,7 @@ def getGeoData(nameSimpul):
     return geodata
 
 def getGeoDataAll():
-    path = "../sqlite/"
+    path = "sqlite/"
     conn = sqlite3.connect(path+'DataGeoLoad.sqlite3')
     cur = conn.cursor()
     find = 'SELECT * FROM Locations'
@@ -31,7 +31,7 @@ def getGeoDataAll():
 
 
 def getSimpulAll():
-    path = "../sqlite/"
+    path = "sqlite/"
     conn = sqlite3.connect(path+'DataGeoLoad.sqlite3')
     cur = conn.cursor()
     find = 'SELECT * FROM Locations'
@@ -131,4 +131,4 @@ def gerLineS():
     return lisLines
 
 
-print(gerLineS())
+#print(gerLineS())

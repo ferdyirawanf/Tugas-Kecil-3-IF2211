@@ -3,7 +3,7 @@ import json
 
 def FiletoSql(filename):
     #mempersiapkan tempat sqlite
-    path = "../sqlite/"
+    path = "sqlite/"
     conn = sqlite3.connect(path+'DataGeoLoad.sqlite3')
     cur = conn.cursor()
 
@@ -73,6 +73,7 @@ def FiletoSql(filename):
 
 
 #FiletoSql("../../test/itb_depan.txt")
+#FiletoSql("../../test/coba.txt")
 
 
 
