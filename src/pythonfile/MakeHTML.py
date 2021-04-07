@@ -15,7 +15,7 @@ def ExportHTML(NameSimpulAsal, NameSimpulTujuan):
         folium.PolyLine(text).add_to(m)
 
 
-    folium.PolyLine(cob2, color='orange').add_to(m)
+    folium.PolyLine(cob2, color='orange', tooltip =listHasil_jarak[1] ).add_to(m)
 
     count = 0
     for text in listHasil_jarak[0]:

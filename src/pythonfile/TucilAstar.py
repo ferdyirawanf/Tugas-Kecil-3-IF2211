@@ -81,10 +81,22 @@ def A_Star_Algoritma(NameSimpulAsal, NameSimpulTujuan):
                 break
    
     listReturn = [listResult, gn]
+    count = 0
+    Hasil =""
+    for text in listReturn[0]:
+        if count == len(listReturn[0]) -1:
+            Hasil += text + ".\nJarak : " + str(listReturn[1])
+        else:
+            Hasil += text + " ---> "
+        count +=1
+
+    #print(Hasil)
+    listReturn.append(Hasil)
     return listReturn
 
 def getLitLngHasil(NameSimpulAsal, NameSimpulTujuan):
     ListHasil = A_Star_Algoritma(NameSimpulAsal, NameSimpulTujuan)[0]
+    print("\nRekomendasi Jalur:\n" + A_Star_Algoritma(NameSimpulAsal, NameSimpulTujuan)[2],"\n")
     listLitLngHasil =[]
     for text in ListHasil:
         listLitLngHasil.append([float(BS.getLit(text)), float(BS.getLng(text))])
@@ -93,6 +105,3 @@ def getLitLngHasil(NameSimpulAsal, NameSimpulTujuan):
 
 #print(getLitLngHasil("Pintu Utama ITB","Simpang Departemen Fisika"))        
 #print(A_Star_Algoritma("B1","G1"))           
-
-
-        #Belum Kelar heheh

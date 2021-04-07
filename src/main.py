@@ -45,7 +45,7 @@ def Input_Asal_Tujuan():
     NameSimpulAsal = input("Masukkan Nama Lokai Awal: > ")
     NameSimpulTujuan = input("Masukkan Nama Lokai Tujuan: > ")
     MH.ExportHTML(NameSimpulAsal, NameSimpulTujuan)
-    print("Silahkan Buka file 'index.html' untuk melihat hasil")
+    print("Silahkan Buka file 'index.html' untuk melihat visualisasi hasil.")
 
 
         
